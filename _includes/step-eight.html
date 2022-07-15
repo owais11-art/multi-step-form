@@ -9,6 +9,14 @@
     <div class="step__button">
         <button class="forward end input-value">Submit</button>
     </div>
+    <div class="notification">
+        <h3 class="notification__head">Why This Information Is Required:</h3>
+        <ul class="notification__list">
+            {% for item in site.data.notification.list %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
     <div class="step-eight__button--back">
         <button class="backward input-value">Back</button>
     </div>

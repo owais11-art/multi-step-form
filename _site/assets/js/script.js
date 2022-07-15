@@ -67,6 +67,17 @@ const validation = (element) => {
     };
 };
 
+
+const selectOption = (key, value, parent) => {
+  values[key.id] = value.textContent;
+  Array.from(parent.children).forEach(item => {
+    if(item.classList.contains('selected')) item.classList.remove('selected');
+    parent.querySelector('.step__button__selected').classList.add('show');
+  });
+  key.classList.add('selected');
+  console.log(values);
+}
+
 document.querySelector(".steps").addEventListener("click", (event) => {
   const target = event.target;
   if (
@@ -90,11 +101,19 @@ document.querySelector(".steps").addEventListener("click", (event) => {
       });
       console.log(values);
     } else if (target.classList.contains("option-value")) {
-      values[target.parentElement.id] = target.textContent;
-      console.log(values);
+      selectOption(target.parentElement, target, steps[index]);
+      // values[target.parentElement.id] = target.textContent;
+      // target.parentElement.style.backgroundColor = '#D0F0C0';
+      // let main = Array.from(steps[index].children);
+      // main = main.slice(1, main.length-2);
+      // console.log(main);
     } else if (target.classList.contains("option")) {
-      values[target.id] = target.firstElementChild.textContent;
-      console.log(values);
+      selectOption(target, target.firstElementChild, steps[index]);
+      // values[target.id] = target.firstElementChild.textContent;
+      // target.style.backgroundColor = '#D0F0C0';
+      // let main = Array.from(steps[index].children);
+      // main = main.slice(1, main.length-1);
+      // console.log(main);
     }
     if (updateIndex && !target.classList.contains("end")) {
       steps[index].classList.toggle(show);
@@ -135,7 +154,7 @@ const handleChange = event => {
     const target = event.target;
     const isValid = validation(target);
     if (isValid.valid) {
-        target.style.borderColor = "#F9C647";
+        target.style.borderColor = "#333333";
         target.nextElementSibling.textContent = '';
     } else {
         target.style.borderColor = "orangered";
@@ -146,3 +165,7 @@ const handleChange = event => {
 document.querySelector("#email").addEventListener("change", (event) => handleChange(event));
 
 document.querySelector("#phone").addEventListener("change", (event) => handleChange(event));
+
+document.querySelector("#firstName").addEventListener("change", (event) => handleChange(event));
+
+document.querySelector("#lastName").addEventListener("change", (event) => handleChange(event));

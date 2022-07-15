@@ -15,13 +15,15 @@ body { font-family: 'Poppins', sans-serif; font-size: 16px; background-color: #f
 
 .step-head { text-align: center; color: #333333; }
 
-.option { cursor: pointer; width: 95%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; border: 2px solid #F9C647; padding: 10px 20px; margin-top: 10px; }
+.option { cursor: pointer; width: 95%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; border: 2px solid #333333; padding: 10px 20px; margin-top: 10px; }
+
+.option.selected { background-color: #D0F0C0; }
 
 @media (min-width: 400px) { .option { width: 350px; } }
 
 .option .option-value { color: #333333; }
 
-.option .icon i { color: #F9C647; font-size: 1.3rem; }
+.option .icon i { color: #333333; font-size: 1.3rem; }
 
 button { display: block; width: 95%; margin: 0 auto; border: none; padding: 10px; background-color: #F9C647; color: white; font-weight: bold; cursor: pointer; }
 
@@ -43,11 +45,21 @@ input { background-color: #f6f6f6; color: #333333; }
 
 @media (min-width: 400px) { .error { width: 350px; } }
 
+.step__button__selected { display: none; }
+
+.step__button__selected.show { display: block; }
+
+.step__button__selected button { background-color: #ade790; }
+
+.backward { background-color: #f6f6f6; color: #333333; text-decoration: underline; font-size: 1.7rem; }
+
+.backward:hover { background-color: #f6f6f6; color: #EE5F36; text-decoration: underline; }
+
 .step-one { margin-top: 30px; }
 
 .step-one__input { margin-top: 30px; }
 
-.step-one__input input { display: block; width: 95%; margin: 0 auto; border: 2px solid #F9C647; outline: none; padding: 10px; }
+.step-one__input input { display: block; width: 95%; margin: 0 auto; border: 2px solid #333333; outline: none; padding: 10px; }
 
 @media (min-width: 400px) { .step-one__input input { width: 350px; } }
 
@@ -57,7 +69,7 @@ input { background-color: #f6f6f6; color: #333333; }
 
 .step-seven__input { margin-top: 30px; }
 
-.step-seven__input input { display: block; width: 95%; margin: 0 auto; border: 2px solid #F9C647; margin-top: 10px; outline: none; padding: 10px; }
+.step-seven__input input { display: block; width: 95%; margin: 0 auto; border: 2px solid #333333; margin-top: 10px; outline: none; padding: 10px; }
 
 @media (min-width: 400px) { .step-seven__input input { width: 350px; } }
 
@@ -65,17 +77,33 @@ input { background-color: #f6f6f6; color: #333333; }
 
 .step-seven__button--back { margin-top: 20px; }
 
+.step-seven .notification { width: 95%; background-color: #c1e2b0; margin: 60px auto; margin-bottom: 30px; padding: 30px; border: 2px dashed #333333; }
+
+@media (min-width: 800px) { .step-seven .notification { width: 80%; } }
+
+.step-seven .notification__list li { list-style-position: inside; margin-top: 20px; }
+
+.step-seven .notification__list li::marker { color: #F9C647; }
+
 .step-eight { margin-top: 30px; }
 
 .step-eight__input { margin-top: 30px; }
 
-.step-eight__input input { display: block; width: 95%; margin: 0 auto; border: 2px solid #F9C647; margin-top: 10px; outline: none; padding: 10px; }
+.step-eight__input input { display: block; width: 95%; margin: 0 auto; border: 2px solid #333333; margin-top: 10px; outline: none; padding: 10px; }
 
 @media (min-width: 400px) { .step-eight__input input { width: 350px; } }
 
 .step-eight__button { margin-top: 20px; }
 
 .step-eight__button--back { margin-top: 20px; }
+
+.step-eight .notification { width: 95%; background-color: #c1e2b0; margin: 60px auto; margin-bottom: 30px; padding: 30px; border: 2px dashed #333333; }
+
+@media (min-width: 800px) { .step-eight .notification { width: 80%; } }
+
+.step-eight .notification__list li { list-style-position: inside; margin-top: 20px; }
+
+.step-eight .notification__list li::marker { color: #F9C647; }
 
 .thanks__head, .thanks__msg { color: #333333; text-align: center; }
 

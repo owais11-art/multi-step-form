@@ -40,6 +40,9 @@ body{
 }
 
 .option{
+    &.selected{
+        background-color: #D0F0C0;
+    }
     cursor: pointer;
     width: 95%;
     @media (min-width: 400px){
@@ -49,7 +52,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid $button-color;
+    border: 2px solid $text-color;
     padding: 10px 20px;
     margin-top: 10px;
     .option-value{
@@ -57,7 +60,7 @@ body{
     }
     .icon{
         i{
-            color: $button-color;
+            color: $text-color;
             font-size: 1.3rem;
         }
     }
@@ -110,4 +113,26 @@ input{
     margin: 0 auto;
     text-align: right;
 
+}
+
+.step__button__selected{
+    display: none;
+    &.show{
+        display: block;
+    }
+    button{
+        background-color: #ade790;
+    }
+}
+
+.backward{
+    background-color: #f6f6f6;
+    color: $text-color;
+    text-decoration: underline;
+    font-size: 1.7rem;
+    &:hover{
+        background-color: #f6f6f6;
+        color: $button-hover;
+        text-decoration: underline;
+    }
 }
