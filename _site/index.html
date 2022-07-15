@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('9X4zpy3QB7SLo8UpR');
+        })();
+    </script>
+    <script src="assets/js/script.js" defer></script>
+    <title>mortagage-form</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">Get Your Mortgage Rate Quote</h1>
+        <h3 class="sub-heading"> It takes only about 30 seconds to complete</h3>
+        <div class="steps">
+            <div class="step step-one show">
+    <h3 class="step-head">Enter ZIP code</h3>
+    <div class="step-one__input">
+        <input type="text" placeholder="Enter ZIP code" id="zip">
+        <small class="error"></small>
+    </div>
+    <div class="step__button">
+        <button class="forward input-value">Continue</button>
+    </div>
+</div>
+            <div class="step step-two">
+    <h3 class="step-head">What type of loan do you need?</h3>
+    
+        <div class="forward option" id="typeOfLoan">
+            <p class="option-value">Home Purchase</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="typeOfLoan">
+            <p class="option-value">Home Refinance</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="typeOfLoan">
+            <p class="option-value">Cash-out Refinance</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+    <div class="step__button">
+        <button class="backward">Back</button>
+    </div>
+</div>
+            <div class="step step-three">
+    <h3 class="step-head">What is the approximate purchase price?</h3>
+    
+        <div class="forward option" id="approximatePurchase">
+            <p class="option-value">$100,000 - $200,000</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="approximatePurchase">
+            <p class="option-value">$200,000 - $300,000</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="approximatePurchase">
+            <p class="option-value">$200,000 - $400,000</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="approximatePurchase">
+            <p class="option-value">$400,000 - $500,000</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="approximatePurchase">
+            <p class="option-value">$500,000 - $600,000</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="approximatePurchase">
+            <p class="option-value">$600,000 - $700,000</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="approximatePurchase">
+            <p class="option-value">$700,000 - $1,000,000</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+    <div class="step__button">
+        <button class="backward">Back</button>
+    </div>
+</div>
+            <div class="step step-four">
+    <h3 class="step-head"> What is your estimated down payment?</h3>
+    
+        <div class="forward option" id="downPayment">
+            <p class="option-value">5%</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="downPayment">
+            <p class="option-value">6%-10%</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="downPayment">
+            <p class="option-value">11%-15%</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="downPayment">
+            <p class="option-value">16%-20%</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="downPayment">
+            <p class="option-value">20%+</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+    <div class="step__button">
+        <button class="backward">Back</button>
+    </div>
+</div>
+            <div class="step step-five">
+    <h3 class="step-head">Estimate your credit score</h3>
+    
+        <div class="forward option" id="creditScore">
+            <p class="option-value">Excellent</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="creditScore">
+            <p class="option-value">Good</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="creditScore">
+            <p class="option-value">Average</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="creditScore">
+            <p class="option-value">Fair or Poor</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+    <div class="step__button">
+        <button class="backward">Back</button>
+    </div>
+</div>
+            <div class="step step-six">
+    <h3 class="step-head">Bankruptcy, short sale or foreclosure in the last 7 years?</h3>
+    
+        <div class="forward option" id="bankruptcy">
+            <p class="option-value">Yes</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+        <div class="forward option" id="bankruptcy">
+            <p class="option-value">No</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    
+    <div class="step__button">
+        <button class="backward">Back</button>
+    </div>
+</div>
+            <div class="step step-seven">
+    <h3 class="step-head">What is your name?</h3>
+    <div class="step-seven__input">
+        <input type="text" placeholder="Enter your First Name" id="firstName">
+        <small class="error"></small>
+        <input type="text" placeholder="Enter your Last Name" id="lastName">
+        <small class="error"></small>
+    </div>
+    <div class="step__button">
+        <button class="forward input-value">Continue</button>
+    </div>
+    <div class="step-seven__button--back">
+        <button class="backward input-value">Back</button>
+    </div>
+</div>
+            <div class="step step-eight">
+    <h3 class="step-head">Enter your email and phone number</h3>
+    <div class="step-seven__input">
+        <input type="text" placeholder="Enter your Email" id="email">
+        <small class="error"></small>
+        <input type="text" placeholder="Enter your Phone Number" id="phone">
+        <small class="error"></small>
+    </div>
+    <div class="step__button">
+        <button class="forward end input-value">Submit</button>
+    </div>
+    <div class="step-eight__button--back">
+        <button class="backward input-value">Back</button>
+    </div>
+</div>
+            <div class="step thanks">
+    <h1 class="thanks__head">Thankyou</h1>
+    <p class="thanks__msg">
+        we have received your submission, one of our executives will contact you shortly
+    </p>
+</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.step-eight{
+    margin-top: 30px;
+    &__input{
+        margin-top: 30px;
+        input{
+            display: block;
+            width: 95%;
+            @media (min-width: 400px){
+                width: 350px;
+            }
+            margin: 0 auto;
+            border: 2px solid $button-color;
+            margin-top: 10px;
+            outline: none;
+            padding: 10px;
+        }
+    }
+    &__button{
+        margin-top: 20px;
+    }
+    &__button--back{
+        margin-top: 20px;
+    }
+}

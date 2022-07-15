@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+$text-color: #333333;
+$button-color:  #F9C647;
+$button-hover: #EE5F36;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #f6f6f6;
+}
+
+.container{
+    padding: 20px 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    .main-heading, .sub-heading{
+        text-align: center;
+        color: $text-color;
+    }
+    .main-heading{
+        @media(min-width: 550px){
+            font-size: 2rem;
+        }
+        font-size: 1.5rem;
+    }
+    .sub-heading{
+        font-size: 1rem;
+    }
+}
+
+.step-head{
+    text-align: center;
+    color: $text-color;
+}
+
+.option{
+    cursor: pointer;
+    width: 95%;
+    @media (min-width: 400px){
+        width: 350px;
+    }
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid $button-color;
+    padding: 10px 20px;
+    margin-top: 10px;
+    .option-value{
+        color: $text-color;
+    }
+    .icon{
+        i{
+            color: $button-color;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+button{
+    display: block;
+    width: 95%;
+    @media (min-width: 400px){
+        width: 350px;
+    }
+    margin: 0 auto;
+    border: none;
+    padding: 10px;
+    background-color: $button-color;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover{
+        background-color: $button-hover;
+    }
+}
+
+.step{
+    display: none;
+    &.show{
+        display: block;
+    }
+    margin-top: 30px;
+    h3{
+        margin-bottom: 30px;
+    }
+    &__button{
+        margin-top: 20px;
+    }
+}
+
+input{
+    background-color: #f6f6f6;
+    color: $text-color;
+}
+
+.error{
+    color: orangered;
+    display: block;
+    width: 95%;
+    @media (min-width: 400px){
+        width: 350px;
+    }
+    margin: 0 auto;
+    text-align: right;
+
+}

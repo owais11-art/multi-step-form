@@ -1,0 +1,14 @@
+<div class="step step-six">
+    <h3 class="step-head">Bankruptcy, short sale or foreclosure in the last 7 years?</h3>
+    {% for item in site.data.step-six.options %}
+        <div class="forward option" id="bankruptcy">
+            <p class="option-value">{{ item }}</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    {% endfor %}
+    <div class="step__button">
+        <button class="backward">Back</button>
+    </div>
+</div>

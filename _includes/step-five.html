@@ -1,0 +1,14 @@
+<div class="step step-five">
+    <h3 class="step-head">Estimate your credit score</h3>
+    {% for item in site.data.step-five.options %}
+        <div class="forward option" id="creditScore">
+            <p class="option-value">{{ item }}</p>
+            <div class="icon">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+        </div>
+    {% endfor %}
+    <div class="step__button">
+        <button class="backward">Back</button>
+    </div>
+</div>
